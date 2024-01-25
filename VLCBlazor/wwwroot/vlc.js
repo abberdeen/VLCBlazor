@@ -249,9 +249,8 @@ function createHandlers() {
     }
 
     Module._wasm_libvlc_init(vlc_opts_array.length, vlc_argv);
-    media_player = new MediaPlayer(Module, "http://tsduck.io/streams/uk-italy-bskyb/sky_282E_10714.ts");//"emjsfile://1");
-    media_player.set_volume(80);
-    media_player.play();
+    media_player = new MediaPlayer(Module, "emjsfile://1");
+    media_player.set_volume(80); 
 
     Module._set_global_media_player(media_player.media_player_ptr);
     window.media_player = media_player;
